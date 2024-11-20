@@ -1,3 +1,4 @@
+import 'package:bouncy_bargains/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bouncy Bargains',
+      themeMode: ThemeMode.system,
+      theme: XAppTheme.lightTheme,
+      darkTheme: XAppTheme.darkTheme,
     );
   }
 }

@@ -5,9 +5,14 @@ import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
+  const SuccessScreen(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.subTitle,
+      required this.onPressed});
 
-  final String image,title,subTitle;
+  final String image, title, subTitle;
   final VoidCallback onPressed;
 
   @override
@@ -18,7 +23,6 @@ class SuccessScreen extends StatelessWidget {
           padding: XSpacingStyles.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
-
               // Image
               Image(
                   width: XHelperFunctions.screenWidth() * 0.6,
@@ -49,8 +53,7 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: onPressed,
-                    child: const Text(XTexts.xContinue)),
+                    onPressed: onPressed, child: const Text(XTexts.xContinue)),
               ),
             ],
           ),

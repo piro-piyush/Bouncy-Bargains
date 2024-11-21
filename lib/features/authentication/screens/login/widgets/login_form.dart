@@ -1,9 +1,9 @@
+import 'package:bouncy_bargains/features/authentication/screens/password_configuration/forget_password_screen.dart';
 import 'package:bouncy_bargains/features/authentication/screens/signup/signup_screen.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 
 class XLoginForm extends StatelessWidget {
@@ -50,7 +50,8 @@ class XLoginForm extends StatelessWidget {
 
               ///Forget Password
               TextButton(
-                  onPressed: () {}, child: const Text(XTexts.forgetPassword))
+                  onPressed: () => Get.to(() => const ForgetPasswordScreen()),
+                  child: const Text(XTexts.forgetPassword))
             ],
           ),
           const SizedBox(

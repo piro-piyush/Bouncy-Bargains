@@ -1,5 +1,6 @@
 import 'package:bouncy_bargains/features/authentication/screens/password_configuration/forget_password_screen.dart';
 import 'package:bouncy_bargains/features/authentication/screens/signup/signup_screen.dart';
+import 'package:bouncy_bargains/navigation_menu.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,8 @@ class XLoginForm extends StatelessWidget {
           SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text(XTexts.signIn))),
+                  onPressed: () => Get.to(() => const NavigationMenu()),
+                  child: const Text(XTexts.signIn))),
           const SizedBox(
             height: XSizes.spaceBtwItems,
           ),

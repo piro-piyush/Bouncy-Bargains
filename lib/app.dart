@@ -1,3 +1,4 @@
+import 'package:bouncy_bargains/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:bouncy_bargains/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -15,14 +16,7 @@ class App extends StatelessWidget {
       darkTheme: XAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBindings(),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Awesome! 🎊 Project Structure is set up and running. \n Happy T Coding 🎊',
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
+      home: const OnboardingScreen(),
     );
   }
 }

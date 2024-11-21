@@ -1,5 +1,4 @@
 import 'package:bouncy_bargains/common/styles/spacing_styles.dart';
-import 'package:bouncy_bargains/features/authentication/controllers/onboarding/onboarding_controllers.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';

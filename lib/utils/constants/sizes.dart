@@ -1,3 +1,4 @@
+
 class XSizes {
   // Padding and margin sizes
   static const double xs = 4.0;
@@ -20,16 +21,16 @@ class XSizes {
   // Button sizes
   static const double buttonHeight = 18.0;
   static const double buttonRadius = 12.0;
-  static const double buttonWidth = 128.0;
+  static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
 
-  // AppBar
+  // AppBar height
   static const double appBarHeight = 56.0;
 
   // Image sizes
   static const double imageThumbSize = 80.0;
 
-  // Spacing
+  // Default spacing between sections
   static const double defaultSpace = 24.0;
   static const double spaceBtwItems = 16.0;
   static const double spaceBtwSections = 32.0;
@@ -39,13 +40,13 @@ class XSizes {
   static const double borderRadiusMd = 8.0;
   static const double borderRadiusLg = 12.0;
 
-  // Divider
+  // Divider height
   static const double dividerHeight = 1.0;
 
   // Product item dimensions
-  static const double productImageSize = 128.0;
+  static const double productImageSize = 120.0;
   static const double productImageRadius = 16.0;
-  static const double productItemHeight = 168.0;
+  static const double productItemHeight = 160.0;
 
   // Input field
   static const double inputFieldRadius = 12.0;
@@ -58,12 +59,15 @@ class XSizes {
   static const double cardRadiusXs = 6.0;
   static const double cardElevation = 2.0;
 
-  // Image carousel
+  // Image carousel height
   static const double imageCarouselHeight = 200.0;
 
-  // Loading indicator
+  // Loading indicator size
   static const double loadingIndicatorSize = 36.0;
 
-  // Grid view
+  // Grid view spacing
   static const double gridViewSpacing = 16.0;
 }
+
+
+

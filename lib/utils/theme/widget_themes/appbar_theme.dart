@@ -1,3 +1,4 @@
+import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class XAppBarTheme {

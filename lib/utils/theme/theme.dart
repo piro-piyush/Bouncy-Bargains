@@ -1,43 +1,49 @@
-import 'package:bouncy_bargains/utils/theme/custom_themes/appbar_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/bottom_sheet_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/checkbox_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/chip_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/elevated_button_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/outlined_button_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/text_field_theme.dart';
-import 'package:bouncy_bargains/utils/theme/custom_themes/text_theme.dart';
+import 'package:bouncy_bargains/utils/constants/colors.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/appbar_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/bottom_sheet_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/checkbox_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/chip_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/elevated_button_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/outlined_button_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/text_field_theme.dart';
+import 'package:bouncy_bargains/utils/theme/widget_themes/text_theme.dart';
 import 'package:flutter/material.dart';
+
 
 class XAppTheme {
   XAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
-      useMaterial3: true,
-      brightness: Brightness.light,
-      fontFamily: "Poppins",
-      primaryColor: Colors.blue,
-      scaffoldBackgroundColor: Colors.white,
-      textTheme: XTextTheme.lightTextTheme,
-      elevatedButtonTheme: XElevatedButtonTheme.lightElevatedButtonTheme,
-      appBarTheme: XAppBarTheme.lightAppBarTheme,
-      checkboxTheme: XCheckBoxTheme.lightCheckBoxTheme,
-      bottomSheetTheme: XBottomSheetTheme.lightBottomSheetTheme,
-      chipTheme: XChipTheme.lightChipTheme,
-      outlinedButtonTheme: XOutlinedButtonTheme.lightOutlinedButtonTheme,
-      inputDecorationTheme: XTextFormFieldTheme.lightInputDecorationTheme);
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    disabledColor: XColors.grey,
+    brightness: Brightness.light,
+    primaryColor: XColors.primary,
+    textTheme: XTextTheme.lightTextTheme,
+    chipTheme: XChipTheme.lightChipTheme,
+    scaffoldBackgroundColor: XColors.white,
+    appBarTheme: XAppBarTheme.lightAppBarTheme,
+    checkboxTheme: XCheckBoxTheme.lightCheckBoxTheme,
+    bottomSheetTheme: XBottomSheetTheme.lightBottomSheetTheme,
+    elevatedButtonTheme: XElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: XOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: XTextFormFieldTheme.lightInputDecorationTheme,
+  );
 
   static ThemeData darkTheme = ThemeData(
-      useMaterial3: true,
-      brightness: Brightness.dark,
-      fontFamily: "Poppins",
-      primaryColor: Colors.blue,
-      scaffoldBackgroundColor: Colors.black,
-      textTheme: XTextTheme.darkTextTheme,
-      elevatedButtonTheme: XElevatedButtonTheme.darkElevatedButtonTheme,
-      checkboxTheme: XCheckBoxTheme.darkCheckBoxTheme,
-      appBarTheme: XAppBarTheme.darkAppBarTheme,
-      bottomSheetTheme: XBottomSheetTheme.darkBottomSheetTheme,
-      chipTheme: XChipTheme.darkChipTheme,
-      outlinedButtonTheme: XOutlinedButtonTheme.darkOutlinedButtonTheme,
-      inputDecorationTheme: XTextFormFieldTheme.darkInputDecorationTheme);
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    disabledColor: XColors.grey,
+    brightness: Brightness.dark,
+    primaryColor: XColors.primary,
+    textTheme: XTextTheme.darkTextTheme,
+    chipTheme: XChipTheme.darkChipTheme,
+    scaffoldBackgroundColor: XColors.black,
+    appBarTheme: XAppBarTheme.darkAppBarTheme,
+    checkboxTheme: XCheckBoxTheme.darkCheckBoxTheme,
+    bottomSheetTheme: XBottomSheetTheme.darkBottomSheetTheme,
+    elevatedButtonTheme: XElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: XOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: XTextFormFieldTheme.darkInputDecorationTheme,
+  );
 }

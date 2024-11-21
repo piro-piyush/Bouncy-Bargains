@@ -1,4 +1,5 @@
 
-class XApiConstants{
-  static const String xSecretApiKey = 'cdddddddds_sdsdsd_dddsd';
-}
+/* -- LIST OF Constants used in APIs -- */
+
+// Example
+const String xSecretAPIKey = "cwt_live_b2da6ds3df3e785v8ddc59198f7615ba";

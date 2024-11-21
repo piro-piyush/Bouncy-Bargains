@@ -1,3 +1,4 @@
+import 'package:bouncy_bargains/common/widgets/success_screen/success_screen.dart';
 import 'package:bouncy_bargains/features/authentication/screens/login/login_screen.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
@@ -65,7 +66,15 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(XTexts.xContinue)),
+                    onPressed: () {
+                      Get.to(() => SuccessScreen(
+                            image: XImages.staticSuccessIllustration,
+                            title: XTexts.yourAccountCreatedTitle,
+                            subTitle: XTexts.yourAccountCreatedSubTitle,
+                            onPressed: () => Get.to(() => const LoginScreen()),
+                          ));
+                    },
+                    child: const Text(XTexts.xContinue)),
               ),
               const SizedBox(
                 height: XSizes.spaceBtwItems,
@@ -73,7 +82,9 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                    onPressed: () {}, child: const Text(XTexts.resendEmail)),
+                  onPressed: () {},
+                  child: const Text(XTexts.resendEmail),
+                ),
               ),
             ],
           ),

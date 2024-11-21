@@ -1,7 +1,9 @@
 import 'package:bouncy_bargains/features/authentication/screens/signup/widgets/terms_and%20_conditions_checkbox.dart';
+import 'package:bouncy_bargains/features/authentication/screens/signup/widgets/verify_email_screen.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class XSignupForm extends StatelessWidget {
@@ -93,7 +95,8 @@ class XSignupForm extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-              onPressed: () {}, child: const Text(XTexts.createAccount)),
+              onPressed: () => Get.to(() => const VerifyEmailScreen()),
+              child: const Text(XTexts.createAccount)),
         )
       ],
     ));

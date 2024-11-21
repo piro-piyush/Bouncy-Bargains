@@ -1,5 +1,5 @@
 import 'package:bouncy_bargains/features/authentication/screens/signup/widgets/terms_and%20_conditions_checkbox.dart';
-import 'package:bouncy_bargains/features/authentication/screens/signup/widgets/verify_email_screen.dart';
+import 'package:bouncy_bargains/features/authentication/screens/signup/verify_email_screen.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';

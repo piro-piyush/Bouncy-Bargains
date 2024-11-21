@@ -8,7 +8,7 @@ class XTexts {
   static const String done = "Done";
   static const String submit = "Submit";
   static const String appName = "T-Store";
-  static const String tContinue = "Continue";
+  static const String xContinue = "Continue";
 
 
   // -- OnBoarding Texts

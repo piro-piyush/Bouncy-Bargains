@@ -29,7 +29,8 @@ class LoginScreen extends StatelessWidget {
 
             /// Divider
             XFormDivider(
-                dividerText: XTexts.orSignInWith.capitalize!,),
+              dividerText: XTexts.orSignInWith.capitalize!,
+            ),
             const SizedBox(
               height: XSizes.spaceBtwSections,
             ),

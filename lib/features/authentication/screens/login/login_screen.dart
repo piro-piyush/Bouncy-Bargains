@@ -1,12 +1,13 @@
 import 'package:bouncy_bargains/common/styles/spacing_styles.dart';
-import 'package:bouncy_bargains/utils/constants/colors.dart';
-import 'package:bouncy_bargains/utils/constants/image_strings.dart';
+import 'package:bouncy_bargains/common/widgets/login_signup/form_divider.dart';
+import 'package:bouncy_bargains/common/widgets/login_signup/social_buttons.dart';
+import 'package:bouncy_bargains/features/authentication/screens/login/widgets/login_form.dart';
+import 'package:bouncy_bargains/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get_utils/get_utils.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -21,116 +22,20 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             /// Logo, Title & Sub-Title
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image(
-                    height: 150,
-                    image: AssetImage(
-                        dark ? XImages.lightAppLogo : XImages.darkAppLogo)),
-                Text(
-                  XTexts.loginTitle,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                const SizedBox(
-                  height: XSizes.sm,
-                ),
-                Text(
-                  XTexts.loginSubTitle,
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-              ],
-            ),
+            XLoginHeader(dark: dark),
 
             /// Form
-            Form(
-                child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: XSizes.spaceBtwSections),
-              child: Column(
-                children: <Widget>[
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        prefixIcon: Icon(Iconsax.direct_right),
-                        labelText: XTexts.email),
-                  ),
-                  const SizedBox(
-                    height: XSizes.spaceBtwInputFields,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        prefixIcon: Icon(Iconsax.password_check),
-                        labelText: XTexts.password,
-                        suffixIcon: Icon(Iconsax.eye_slash)),
-                  ),
-                  const SizedBox(
-                    height: XSizes.spaceBtwInputFields / 2,
-                  ),
-
-                  /// Remember Me & Forget Password
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ///Remember Me
-                      Row(
-                        children: [
-                          Checkbox(value: true, onChanged: (value) {}),
-                          const Text(XTexts.rememberMe)
-                        ],
-                      ),
-
-                      ///Forget Password
-                      TextButton(
-                          onPressed: () {},
-                          child: const Text(XTexts.forgetPassword))
-                    ],
-                  ),
-                  const SizedBox(
-                    height: XSizes.spaceBtwSections,
-                  ),
-
-                  // SignIn Button
-                  SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                          onPressed: () {}, child: const Text(XTexts.signIn))),
-                  const SizedBox(
-                    height: XSizes.spaceBtwItems,
-                  ),
-
-                  // Create Account Button
-                  SizedBox(
-                      width: double.infinity,
-                      child: OutlinedButton(
-                          onPressed: () {},
-                          child: const Text(XTexts.createAccount))),
-                  const SizedBox(
-                    height: XSizes.spaceBtwItems,
-                  ),
-                ],
-              ),
-            )
-            ),
+            const XLoginForm(),
 
             /// Divider
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              Flexible(
-                child: Divider(
-                  color: dark? XColors.darkerGrey: XColors.grey,
-                  thickness: 0.5,indent: 60,endIndent: 5,
-                ),
-              ),
-                 Text(XTexts.orSignInWith.capitalize!,style: Theme.of(context).textTheme.labelMedium,),
-                Flexible(
-                child: Divider(
-                  color: dark? XColors.darkerGrey: XColors.grey,
-                  thickness: 0.5,indent: 5,endIndent: 60,
-                ),
-              )
-              ],
-            )
+            XFormDivider(
+                dividerText: XTexts.orSignInWith.capitalize!,),
+            const SizedBox(
+              height: XSizes.spaceBtwSections,
+            ),
+
+            /// Footer
+            const XSocialButtons()
           ],
         ),
       )),

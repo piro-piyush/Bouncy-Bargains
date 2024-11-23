@@ -1,5 +1,6 @@
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:bouncy_bargains/common/widgets/images/x_rounded_image.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -40,9 +41,11 @@ class HomeScreen extends StatelessWidget {
             ),
 
             // Body
-            Container(
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(XSizes.md)),
-              child: const Image(image: AssetImage(XImages.promoBanner1,))
+            Padding(
+              padding: EdgeInsets.all(XSizes.defaultSpace),
+              child: XRoundedImage(
+                imageUrl: XImages.promoBanner4,
+              ),
             )
           ],
         ),

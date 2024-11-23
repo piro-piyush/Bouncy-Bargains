@@ -1,4 +1,3 @@
-import 'package:bouncy_bargains/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 

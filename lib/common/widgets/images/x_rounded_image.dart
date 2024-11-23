@@ -1,4 +1,3 @@
-import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 

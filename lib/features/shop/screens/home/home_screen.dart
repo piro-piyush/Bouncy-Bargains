@@ -1,5 +1,7 @@
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:bouncy_bargains/common/widgets/layouts/grid_layout.dart';
+import 'package:bouncy_bargains/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/promo_slider.dart';
@@ -12,12 +14,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             // App Bar
-            XPrimaryHeaderContainer(
+            const XPrimaryHeaderContainer(
               child: Column(
                 children: [
                   // App Bar
@@ -42,13 +44,27 @@ class HomeScreen extends StatelessWidget {
 
             // Body
             Padding(
-                padding: EdgeInsets.all(XSizes.defaultSpace),
-                child: XPromoSlider(
-                  banners: [
-                    XImages.promoBanner1,
-                    XImages.promoBanner2,
-                    XImages.promoBanner3,
-                    XImages.promoBanner3
+                padding: const EdgeInsets.all(XSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    // Promo slider
+                    const XPromoSlider(
+                      banners: [
+                        XImages.promoBanner1,
+                        XImages.promoBanner2,
+                        XImages.promoBanner3,
+                        XImages.promoBanner3
+                      ],
+                    ),
+                    const SizedBox(
+                      height: XSizes.spaceBtwSections,
+                    ),
+
+                    // Popular products
+                    XGridLayout(
+                      itemBuilder: (_, index) => const XProductCardVertical(),
+                      itemCount: 4,
+                    ),
                   ],
                 ))
           ],

@@ -1,5 +1,5 @@
 import 'package:bouncy_bargains/common/widgets/appbar/appbar.dart';
-import 'package:bouncy_bargains/common/widgets/products/cart_menu_icon.dart';
+import 'package:bouncy_bargains/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';

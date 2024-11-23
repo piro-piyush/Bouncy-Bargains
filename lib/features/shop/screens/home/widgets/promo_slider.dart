@@ -20,6 +20,7 @@ class XPromoSlider extends StatelessWidget {
     final controller = Get.put(HomeController());
     return Column(
       children: [
+        // Carousel Slider
         CarouselSlider(
             options: CarouselOptions(
                 autoPlay: true,
@@ -27,15 +28,15 @@ class XPromoSlider extends StatelessWidget {
                 onPageChanged: (index, _) =>
                     controller.updatePageIndicator(index)),
             items: banners.map((url) => XRoundedImage(imageUrl: url)).toList()),
-
         const SizedBox(
           height: XSizes.spaceBtwItems,
         ),
+
         Obx(() => Center(
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  for (int i = 0; i < 3; i++)
+                  for (int i = 0; i < banners.length; i++)
                     XCircularContainer(
                       width: 20,
                       height: 4,

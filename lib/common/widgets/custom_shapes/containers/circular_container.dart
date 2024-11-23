@@ -1,4 +1,3 @@
-
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,8 @@ class XCircularContainer extends StatelessWidget {
     this.radius = 400,
     this.padding = 0,
     this.child,
-    this.backgroundColor = XColors.white, this.margin,
+    this.backgroundColor = XColors.white,
+    this.margin,
   });
 
   final double? width;
@@ -29,8 +29,7 @@ class XCircularContainer extends StatelessWidget {
       margin: margin,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(400),
-          color: XColors.textWhite.withOpacity(0.1)),
+          borderRadius: BorderRadius.circular(400), color: backgroundColor),
       child: child,
     );
   }

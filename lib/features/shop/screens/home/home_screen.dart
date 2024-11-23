@@ -2,6 +2,7 @@ import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -10,10 +11,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // App Bar
             XPrimaryHeaderContainer(
               child: Column(
                 children: [
@@ -35,6 +37,12 @@ class HomeScreen extends StatelessWidget {
                   XHomeCategories()
                 ],
               ),
+            ),
+
+            // Body
+            Container(
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(XSizes.md)),
+              child: const Image(image: AssetImage(XImages.promoBanner1,))
             )
           ],
         ),

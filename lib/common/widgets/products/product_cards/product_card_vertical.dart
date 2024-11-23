@@ -104,35 +104,43 @@ class XProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
-                  // const Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-                      const XProductPriceText(price: '35.0', isLarge: true),
-
-                      // Add to Cart Button
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: XColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(XSizes.cardRadiusMd),
-                                bottomRight: Radius.circular(
-                                    XSizes.productImageRadius))),
-                        child: const SizedBox(
-                            width: XSizes.iconLg * 1.2,
-                            height: XSizes.iconLg * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: XColors.white,
-                              ),
-                            )),
-                      )
-                    ],
-                  )
                 ],
               ),
+            ),
+
+            const Spacer(),
+
+            // Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+                const Padding(
+                  padding: EdgeInsets.only(left: XSizes.sm),
+                  child: XProductPriceText(
+                    price: '35.0',
+                  ),
+                ),
+
+                // Add to Cart Button
+                Container(
+                  decoration: const BoxDecoration(
+                      color: XColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(XSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(XSizes.productImageRadius))),
+                  child: const SizedBox(
+                      width: XSizes.iconLg * 1.2,
+                      height: XSizes.iconLg * 1.2,
+                      child: Center(
+                        child: Icon(
+                          Iconsax.add,
+                          color: XColors.white,
+                        ),
+                      )),
+                )
+              ],
             )
           ],
         ),

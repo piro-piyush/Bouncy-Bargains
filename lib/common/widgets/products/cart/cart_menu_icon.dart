@@ -5,11 +5,12 @@ import 'package:iconsax/iconsax.dart';
 class XCartCounterWidget extends StatelessWidget {
   const XCartCounterWidget({
     super.key,
-    this.onPressed,
-    required this.iconColor,
+    required this.onPressed,
+    this.iconColor = XColors.white, this.icon =Iconsax.shopping_bag,
   });
 
-  final VoidCallback? onPressed;
+  final VoidCallback onPressed;
+  final IconData icon;
   final Color iconColor;
 
   @override
@@ -18,7 +19,7 @@ class XCartCounterWidget extends StatelessWidget {
       children: [
         IconButton(
             onPressed: onPressed,
-            icon: Icon(Iconsax.shopping_bag, color: iconColor)),
+            icon: Icon(icon, color: iconColor)),
         Positioned(
           right: 0,
           child: Container(

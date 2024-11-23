@@ -31,9 +31,10 @@ class XHomeAppBar extends StatelessWidget {
           )
         ],
       ),
-      actions: const [
+      actions: [
         XCartCounterWidget(
           iconColor: XColors.white,
+          onPressed: () {},
         )
       ],
     );

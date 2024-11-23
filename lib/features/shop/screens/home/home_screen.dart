@@ -2,6 +2,7 @@ import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:bouncy_bargains/common/widgets/layouts/grid_layout.dart';
 import 'package:bouncy_bargains/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:bouncy_bargains/common/widgets/texts/section_heading.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/promo_slider.dart';
@@ -60,10 +61,16 @@ class HomeScreen extends StatelessWidget {
                       height: XSizes.spaceBtwSections,
                     ),
 
+                    // Heading
+                    XSectionHeading(title: 'Popular Products',onPressed: (){},),
+                    const SizedBox(
+                      height: XSizes.spaceBtwItems,
+                    ),
+
                     // Popular products
                     XGridLayout(
                       itemBuilder: (_, index) => const XProductCardVertical(),
-                      itemCount: 4,
+                      itemCount: 2,
                     ),
                   ],
                 ))

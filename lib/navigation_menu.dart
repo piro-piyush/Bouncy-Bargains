@@ -1,4 +1,5 @@
 import 'package:bouncy_bargains/features/shop/screens/home/home_screen.dart';
+import 'package:bouncy_bargains/features/shop/screens/store/store.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.yellow),
+    const Store(),
     Container(color: Colors.red),
     Container(color: Colors.blue),
   ];

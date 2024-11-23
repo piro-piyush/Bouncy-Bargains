@@ -1,8 +1,8 @@
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:bouncy_bargains/common/widgets/images/x_rounded_image.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:bouncy_bargains/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -42,11 +42,15 @@ class HomeScreen extends StatelessWidget {
 
             // Body
             Padding(
-              padding: EdgeInsets.all(XSizes.defaultSpace),
-              child: XRoundedImage(
-                imageUrl: XImages.promoBanner4,
-              ),
-            )
+                padding: EdgeInsets.all(XSizes.defaultSpace),
+                child: XPromoSlider(
+                  banners: [
+                    XImages.promoBanner1,
+                    XImages.promoBanner2,
+                    XImages.promoBanner3,
+                    XImages.promoBanner3
+                  ],
+                ))
           ],
         ),
       ),

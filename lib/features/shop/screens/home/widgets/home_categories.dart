@@ -16,6 +16,7 @@ class XHomeCategories extends StatelessWidget {
       padding: const EdgeInsets.only(left: XSizes.defaultSpace),
       child: Column(
         children: [
+          // Heading
           const XSectionHeading(
             title: 'Popular Categories',
             textColor: XColors.white,
@@ -23,6 +24,8 @@ class XHomeCategories extends StatelessWidget {
           const SizedBox(
             height: XSizes.spaceBtwItems,
           ),
+
+          // List of Categories
           SizedBox(
             height: 80,
             child: ListView.builder(

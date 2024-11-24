@@ -32,7 +32,7 @@ class XHomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        XCartCounterWidget(
+        XCartCounterIcon(
           iconColor: XColors.white,
           onPressed: () {},
         )

@@ -5,11 +5,13 @@ import 'package:bouncy_bargains/common/widgets/images/x_rounded_image.dart';
 import 'package:bouncy_bargains/common/widgets/texts/product_price_text.dart';
 import 'package:bouncy_bargains/common/widgets/texts/product_title_text.dart';
 import 'package:bouncy_bargains/common/widgets/texts/x_brand_title_text_with_verified_icon.dart';
+import 'package:bouncy_bargains/features/shop/screens/product/product_details_screen.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class XProductCardVertical extends StatelessWidget {
@@ -19,7 +21,7 @@ class XProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = XHelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailsScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

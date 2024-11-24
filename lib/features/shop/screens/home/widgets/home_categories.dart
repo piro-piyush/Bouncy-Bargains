@@ -20,6 +20,7 @@ class XHomeCategories extends StatelessWidget {
           const XSectionHeading(
             title: 'Popular Categories',
             textColor: XColors.white,
+            showActionButton: false,
           ),
           const SizedBox(
             height: XSizes.spaceBtwItems,

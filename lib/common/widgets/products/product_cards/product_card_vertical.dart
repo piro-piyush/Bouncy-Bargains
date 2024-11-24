@@ -2,7 +2,9 @@ import 'package:bouncy_bargains/common/styles/shadows.dart';
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:bouncy_bargains/common/widgets/icons/circular_icon.dart';
 import 'package:bouncy_bargains/common/widgets/images/x_rounded_image.dart';
+import 'package:bouncy_bargains/common/widgets/texts/product_price_text.dart';
 import 'package:bouncy_bargains/common/widgets/texts/product_title_text.dart';
+import 'package:bouncy_bargains/common/widgets/texts/x_brand_title_text_with_verified_icon.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
@@ -74,35 +76,20 @@ class XProductCardVertical extends StatelessWidget {
             ),
 
             // Details
-            Padding(
-              padding: const EdgeInsets.only(left: XSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: XSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const XProductTitleText(
+                  XProductTitleText(
                     title: 'Green Nike Air Shoes',
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: XSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        style: Theme.of(context).textTheme.labelMedium,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(
-                        width: XSizes.sm,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: XColors.primary,
-                        size: XSizes.iconXs,
-                      )
-                    ],
+                  XBrandTitleWithVerifiedIcon(
+                    title: 'Nike',
                   ),
                 ],
               ),
@@ -145,36 +132,6 @@ class XProductCardVertical extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class XProductPriceText extends StatelessWidget {
-  const XProductPriceText({
-    super.key,
-    this.currencySign = '\$',
-    required this.price,
-    this.maxLines = 1,
-    this.isLarge = false,
-    this.lineThrough = false,
-  });
-
-  final String currencySign, price;
-  final int maxLines;
-  final bool isLarge;
-  final bool lineThrough;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      currencySign + price,
-      maxLines: maxLines,
-      overflow: TextOverflow.ellipsis,
-      style: isLarge
-          ? Theme.of(context).textTheme.headlineMedium!.apply(
-              decoration: lineThrough ? TextDecoration.lineThrough : null)
-          : Theme.of(context).textTheme.titleLarge!.apply(
-              decoration: lineThrough ? TextDecoration.lineThrough : null),
     );
   }
 }

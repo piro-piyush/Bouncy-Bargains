@@ -3,9 +3,12 @@ import 'package:bouncy_bargains/common/list_tile/user_profile_tile.dart';
 import 'package:bouncy_bargains/common/widgets/appbar/appbar.dart';
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:bouncy_bargains/common/widgets/texts/section_heading.dart';
+import 'package:bouncy_bargains/features/personalization/screens/profile/profile_screen.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -33,7 +36,9 @@ class SettingsScreen extends StatelessWidget {
                   ),
 
                   // User Profile Card
-                  const XUserProfileTile(),
+                  XUserProfileTile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
                   const SizedBox(
                     height: XSizes.spaceBtwSections,
                   ),

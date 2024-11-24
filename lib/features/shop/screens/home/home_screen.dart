@@ -38,7 +38,10 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   // Categories
-                  XHomeCategories()
+                  XHomeCategories(),
+                  SizedBox(
+                    height: XSizes.spaceBtwSections,
+                  )
                 ],
               ),
             ),
@@ -62,7 +65,10 @@ class HomeScreen extends StatelessWidget {
                     ),
 
                     // Heading
-                    XSectionHeading(title: 'Popular Products',onPressed: (){},),
+                    XSectionHeading(
+                      title: 'Popular Products',
+                      onPressed: () {},
+                    ),
                     const SizedBox(
                       height: XSizes.spaceBtwItems,
                     ),

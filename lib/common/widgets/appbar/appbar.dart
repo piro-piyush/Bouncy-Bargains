@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-class XAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const XAppbar({
+class XAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const XAppBar({
     super.key,
     this.title,
     this.showBackArrow = false,

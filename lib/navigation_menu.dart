@@ -1,3 +1,5 @@
+import 'package:bouncy_bargains/features/personalization/screens/settings/settings_screen.dart';
+import 'package:bouncy_bargains/features/shop/screens/favourite/favourite_screen.dart';
 import 'package:bouncy_bargains/features/shop/screens/home/home_screen.dart';
 import 'package:bouncy_bargains/features/shop/screens/store/store_screen.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
@@ -47,7 +49,7 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.red),
-    Container(color: Colors.blue),
+    const FavouriteScreen(),
+    const SettingsScreen(),
   ];
 }

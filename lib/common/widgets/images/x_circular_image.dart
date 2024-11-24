@@ -1,5 +1,4 @@
 import 'package:bouncy_bargains/utils/constants/colors.dart';
-import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -38,8 +37,8 @@ class XCircularImage extends StatelessWidget {
       child: Image(
         fit: fit,
         image: isNetworkImage
-            ? const NetworkImage(XImages.clothIcon)
-            : const AssetImage(XImages.clothIcon) as ImageProvider,
+            ?  NetworkImage(image)
+            :  AssetImage(image) as ImageProvider,
         color: overlayColor,
       ),
     );

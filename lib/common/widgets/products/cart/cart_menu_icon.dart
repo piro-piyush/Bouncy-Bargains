@@ -27,13 +27,13 @@ class XCartCounterIcon extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-                color: dark ? XColors.white : XColors.black,
+                color: dark ? XColors.black : XColors.white,
                 borderRadius: BorderRadius.circular(100)),
             child: Center(
               child: Text(
                 '2',
                 style: Theme.of(context).textTheme.labelLarge!.apply(
-                    color: dark ? XColors.black : XColors.white,
+                    color: dark ? XColors.white : XColors.black,
                     fontSizeDelta: 0.8),
               ),
             ),

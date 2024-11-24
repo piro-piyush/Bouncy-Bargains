@@ -11,7 +11,7 @@ class XHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return XAppbar(
+    return XAppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

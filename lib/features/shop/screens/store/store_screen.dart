@@ -20,7 +20,7 @@ class StoreScreen extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
-        appBar: XAppbar(
+        appBar: XAppBar(
           title: const Text('Store'),
           actions: [
             XCartCounterIcon(

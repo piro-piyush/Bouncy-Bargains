@@ -38,6 +38,7 @@ class XRoundedImage extends StatelessWidget {
           padding: padding,
           decoration: BoxDecoration(
               color: backgroundColor,
+              border: border,
               borderRadius: BorderRadius.circular(borderRadius)),
           child: ClipRRect(
               borderRadius: applyImageRadius

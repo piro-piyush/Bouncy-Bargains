@@ -4,7 +4,6 @@ import 'package:bouncy_bargains/features/shop/screens/product/widgets/product_at
 import 'package:bouncy_bargains/features/shop/screens/product/widgets/product_detail_image_slider.dart';
 import 'package:bouncy_bargains/features/shop/screens/product/widgets/product_meta_data.dart';
 import 'package:bouncy_bargains/features/shop/screens/product/widgets/rating_share_widget.dart';
-import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +15,6 @@ class ProductDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = XHelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

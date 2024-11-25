@@ -14,10 +14,12 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.leadingIcon,
     this.actions,
     this.leadingOnPressed,
+    this.centerTitle = false,
   });
 
   final Widget? title;
   final bool showBackArrow;
+  final bool centerTitle;
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final VoidCallback? leadingOnPressed;
@@ -36,11 +38,10 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
                 color: dark ? Colors.white : XColors.dark,
               )
             : leadingIcon != null
-                ? IconButton(
-                    onPressed: () => leadingOnPressed, icon: Icon(leadingIcon))
+                ? IconButton(onPressed: () => leadingOnPressed, icon: Icon(leadingIcon))
                 : null,
         title: title,
-        centerTitle: false,
+        centerTitle: centerTitle,
         actions: actions,
       ),
     );

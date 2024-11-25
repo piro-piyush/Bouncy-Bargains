@@ -5,7 +5,6 @@ import 'package:bouncy_bargains/features/shop/screens/product/widgets/product_de
 import 'package:bouncy_bargains/features/shop/screens/product/widgets/product_meta_data.dart';
 import 'package:bouncy_bargains/features/shop/screens/product/widgets/rating_share_widget.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
-import 'package:bouncy_bargains/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';

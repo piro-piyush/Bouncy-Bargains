@@ -3,12 +3,12 @@ import 'package:bouncy_bargains/common/list_tile/user_profile_tile.dart';
 import 'package:bouncy_bargains/common/widgets/appbar/appbar.dart';
 import 'package:bouncy_bargains/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:bouncy_bargains/common/widgets/texts/section_heading.dart';
+import 'package:bouncy_bargains/features/personalization/screens/address/address_screen.dart';
 import 'package:bouncy_bargains/features/personalization/screens/profile/profile_screen.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -28,10 +28,7 @@ class SettingsScreen extends StatelessWidget {
                   XAppBar(
                     title: Text(
                       'Account',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineMedium!
-                          .apply(color: XColors.white),
+                      style: Theme.of(context).textTheme.headlineMedium!.apply(color: XColors.white),
                     ),
                   ),
 
@@ -61,10 +58,12 @@ class SettingsScreen extends StatelessWidget {
                   ),
 
                   XSettingsMenuTile(
-                    title: "My Address",
+                    title: "My Addresses",
                     subTitle: "Set shopping delivery address",
                     icon: Iconsax.safe_home,
-                    onTapped: () {},
+                    onTapped: () {
+                      Get.to(() => const AddressScreen());
+                    },
                   ),
                   XSettingsMenuTile(
                     title: "My Cart",
@@ -146,8 +145,7 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(
-                        onPressed: () {}, child: const Text('Logout')),
+                    child: OutlinedButton(onPressed: () {}, child: const Text('Logout')),
                   ),
                   const SizedBox(
                     height: XSizes.spaceBtwSections * 2.5,

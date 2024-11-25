@@ -5,7 +5,7 @@ import 'package:bouncy_bargains/common/widgets/images/x_rounded_image.dart';
 import 'package:bouncy_bargains/common/widgets/texts/product_price_text.dart';
 import 'package:bouncy_bargains/common/widgets/texts/product_title_text.dart';
 import 'package:bouncy_bargains/common/widgets/texts/x_brand_title_text_with_verified_icon.dart';
-import 'package:bouncy_bargains/features/shop/screens/product/product_details_screen.dart';
+import 'package:bouncy_bargains/features/shop/screens/product/product_details/product_details_screen.dart';
 import 'package:bouncy_bargains/utils/constants/colors.dart';
 import 'package:bouncy_bargains/utils/constants/image_strings.dart';
 import 'package:bouncy_bargains/utils/constants/sizes.dart';

@@ -22,24 +22,24 @@ class XBottomAddToCart extends StatelessWidget {
         children: [
           Row(
             children: [
-              XCircularIcon(
+              const XCircularIcon(
                 icon: Iconsax.minus,
                 width: 40,
                 height: 40,
                 backgroundColor: XColors.darkGrey,
                 color: XColors.white,
               ),
-              SizedBox(
+              const SizedBox(
                 width: XSizes.spaceBtwItems,
               ),
               Text(
                 '2',
                 style: Theme.of(context).textTheme.titleSmall,
               ),
-              SizedBox(
+              const SizedBox(
                 width: XSizes.spaceBtwItems,
               ),
-              XCircularIcon(
+              const XCircularIcon(
                 icon: Iconsax.add,
                 width: 40,
                 height: 40,
@@ -48,7 +48,7 @@ class XBottomAddToCart extends StatelessWidget {
               ),
             ],
           ),
-          ElevatedButton(onPressed: () {}, style: ElevatedButton.styleFrom(padding: EdgeInsets.all(XSizes.md), backgroundColor: XColors.black, side: BorderSide(color: XColors.black)), child: Text('Add to Cart'))
+          ElevatedButton(onPressed: () {}, style: ElevatedButton.styleFrom(padding: const EdgeInsets.all(XSizes.md), backgroundColor: XColors.black, side: const BorderSide(color: XColors.black)), child: const Text('Add to Cart'))
         ],
       ),
     );
